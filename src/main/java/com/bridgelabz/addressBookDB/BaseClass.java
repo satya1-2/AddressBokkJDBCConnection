@@ -13,6 +13,7 @@ public class BaseClass {
         AddressBookDB addressBookDB=new AddressBookDB();
         addressBookDB.retrieveAddressBook();
         addressBookDB.insertAddressBookData();
+        addressBookDB.retrieveAddressBookForCityOrState();
         listOfDrivers();
         setUpDatabase();
 

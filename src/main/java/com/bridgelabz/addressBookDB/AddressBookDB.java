@@ -41,4 +41,11 @@ public class AddressBookDB extends BaseClass {
 
         System.out.println("Record added successfully");
     }
+    public void retrieveAddressBookForCityOrState() throws SQLException {
+        connection = setUpDatabase();
+        Statement statement = connection.createStatement();
+        String query = "select city,state from contacts where firstName='Satya';";
+        ResultSet resultSe = statement.executeQuery(query);
+        System.out.println("Retrieve only city or state from  the addressbook  data"+resultSe);
+    }
 }
