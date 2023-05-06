@@ -48,4 +48,13 @@ public class AddressBookDB extends BaseClass {
         ResultSet resultSe = statement.executeQuery(query);
         System.out.println("Retrieve only city or state from  the addressbook  data"+resultSe);
     }
-}
+    public void updateContactPersonInformationData() throws SQLException {
+        connection = setUpDatabase();
+        String updateQuery = "update contacts set lastname = ? WHERE firstName = ?";
+        PreparedStatement preparedStatement = connection.prepareStatement(updateQuery);
+        preparedStatement.setString(1, "yadav");
+        preparedStatement.setString(2, "Terrisa");
+        preparedStatement.executeUpdate();
+        System.out.println("Record updated successfully");
+    }
+    }

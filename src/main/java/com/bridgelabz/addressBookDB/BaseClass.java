@@ -14,6 +14,7 @@ public class BaseClass {
         addressBookDB.retrieveAddressBook();
         addressBookDB.insertAddressBookData();
         addressBookDB.retrieveAddressBookForCityOrState();
+        addressBookDB.updateContactPersonInformationData();
         listOfDrivers();
         setUpDatabase();
 
