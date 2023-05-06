@@ -25,4 +25,20 @@ public class AddressBookDB extends BaseClass {
 
         System.out.println("Retrieve all the addressbook  data");
     }
+    public void insertAddressBookData() throws SQLException {
+        connection = setUpDatabase();
+        String insertQuery = "insert into contacts(firstName,lastName,addrss,city,state,zip,phoneNumber,email) values(?,?,?,?,?,?,?,?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
+        preparedStatement.setString(1, "Terrisa");
+        preparedStatement.setString(2, "kumari");
+        preparedStatement.setString(3, "chd");
+        preparedStatement.setString(4, "mohali");
+        preparedStatement.setString(5, "punjab");
+        preparedStatement.setInt(6, 2345);
+        preparedStatement.setInt(7, 987654345);
+        preparedStatement.setString(8, "tris@123gmail");
+        preparedStatement.execute();
+
+        System.out.println("Record added successfully");
+    }
 }

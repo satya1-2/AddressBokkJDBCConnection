@@ -12,6 +12,7 @@ public class BaseClass {
     public static void main(String[] args) throws SQLException {
         AddressBookDB addressBookDB=new AddressBookDB();
         addressBookDB.retrieveAddressBook();
+        addressBookDB.insertAddressBookData();
         listOfDrivers();
         setUpDatabase();
 
